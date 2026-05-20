@@ -1,0 +1,68 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data
+data/uploads/  # Keep folder but ignore PDFs
+!data/uploads/.gitkeep
+
+# Vector Store (can be large, regenerate from PDFs)
+data/vector_store/
+
+# Models
+models/
+!models/.gitkeep
+
+# Logs
+*.log
+logs/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Cache
+.cache/
+*.cache
+
+# System
+.env
+.env.local
+
+# Ollama
+.ollama/
+
+# OS specific
+Thumbs.db

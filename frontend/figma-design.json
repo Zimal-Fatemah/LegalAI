@@ -1,0 +1,1643 @@
+﻿{
+    "id":  "0:0",
+    "name":  "Document",
+    "type":  "DOCUMENT",
+    "scrollBehavior":  "SCROLLS",
+    "children":  [
+                     {
+                         "id":  "165:1884",
+                         "name":  "👋 Introduction",
+                         "type":  "CANVAS",
+                         "scrollBehavior":  "SCROLLS",
+                         "children":  [
+                                          {
+                                              "id":  "165:2601",
+                                              "name":  "Getting started",
+                                              "type":  "FRAME",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "boundVariables":  {
+                                                                     "fills":  "",
+                                                                     "strokes":  ""
+                                                                 },
+                                              "explicitVariableModes":  {
+                                                                            "VariableCollectionId:39:7914":  "1299:5"
+                                                                        },
+                                              "children":  [
+
+                                                           ],
+                                              "blendMode":  "PASS_THROUGH",
+                                              "clipsContent":  true,
+                                              "background":  [
+                                                                 "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}"
+                                                             ],
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}"
+                                                        ],
+                                              "strokes":  [
+                                                              "@{opacity=0.20000000298023224; blendMode=NORMAL; type=SOLID; color=; boundVariables=}"
+                                                          ],
+                                              "cornerRadius":  8.0,
+                                              "cornerSmoothing":  0.0,
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "backgroundColor":  {
+                                                                      "r":  0.24705882370471954,
+                                                                      "g":  0.23921568691730499,
+                                                                      "b":  0.23529411852359772,
+                                                                      "a":  1.0
+                                                                  },
+                                              "layoutMode":  "VERTICAL",
+                                              "counterAxisSizingMode":  "FIXED",
+                                              "counterAxisAlignItems":  "CENTER",
+                                              "paddingTop":  40.0,
+                                              "paddingBottom":  150.0,
+                                              "itemSpacing":  76.0,
+                                              "layoutWrap":  "NO_WRAP",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  1471.0,
+                                                                          "y":  0.0,
+                                                                          "width":  1512.0,
+                                                                          "height":  4684.801269531250
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  1471.0,
+                                                                           "y":  0.0,
+                                                                           "width":  1512.0,
+                                                                           "height":  4684.801269531250
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "layoutSizingHorizontal":  "FIXED",
+                                              "layoutSizingVertical":  "HUG",
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18743",
+                                              "name":  "Upgrade",
+                                              "type":  "COMPONENT",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "boundVariables":  {
+                                                                     "fills":  ""
+                                                                 },
+                                              "explicitVariableModes":  {
+                                                                            "VariableCollectionId:39:7914":  "1299:5"
+                                                                        },
+                                              "children":  [
+
+                                                           ],
+                                              "blendMode":  "PASS_THROUGH",
+                                              "clipsContent":  true,
+                                              "background":  [
+                                                                 "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}",
+                                                                 "@{opacity=0.30000001192092896; blendMode=NORMAL; type=GRADIENT_LINEAR; gradientHandlePositions=System.Object[]; gradientStops=System.Object[]}"
+                                                             ],
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}",
+                                                            "@{opacity=0.30000001192092896; blendMode=NORMAL; type=GRADIENT_LINEAR; gradientHandlePositions=System.Object[]; gradientStops=System.Object[]}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "cornerRadius":  96.0,
+                                              "cornerSmoothing":  0.0,
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "backgroundColor":  {
+                                                                      "r":  0.0,
+                                                                      "g":  0.0,
+                                                                      "b":  0.0,
+                                                                      "a":  0.0
+                                                                  },
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -150.0,
+                                                                          "y":  0.0,
+                                                                          "width":  1504.0,
+                                                                          "height":  1181.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -150.0,
+                                                                           "y":  0.0,
+                                                                           "width":  1504.0,
+                                                                           "height":  1181.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          }
+                                      ],
+                         "backgroundColor":  {
+                                                 "r":  0.35668924450874329,
+                                                 "g":  0.37782385945320129,
+                                                 "b":  0.3825683593750,
+                                                 "a":  1.0
+                                             },
+                         "prototypeStartNodeID":  null,
+                         "flowStartingPoints":  [
+
+                                                ],
+                         "prototypeDevice":  {
+                                                 "type":  "NONE",
+                                                 "rotation":  "NONE"
+                                             }
+                     },
+                     {
+                         "id":  "171:1878",
+                         "name":  "----",
+                         "type":  "CANVAS",
+                         "scrollBehavior":  "SCROLLS",
+                         "children":  [
+
+                                      ],
+                         "backgroundColor":  {
+                                                 "r":  0.27356895804405212,
+                                                 "g":  0.27356895804405212,
+                                                 "b":  0.27356895804405212,
+                                                 "a":  1.0
+                                             },
+                         "prototypeStartNodeID":  null,
+                         "flowStartingPoints":  [
+
+                                                ],
+                         "prototypeDevice":  {
+                                                 "type":  "NONE",
+                                                 "rotation":  "NONE"
+                                             }
+                     },
+                     {
+                         "id":  "171:1879",
+                         "name":  "Designs",
+                         "type":  "CANVAS",
+                         "scrollBehavior":  "SCROLLS",
+                         "children":  [
+
+                                      ],
+                         "backgroundColor":  {
+                                                 "r":  0.27356895804405212,
+                                                 "g":  0.27356895804405212,
+                                                 "b":  0.27356895804405212,
+                                                 "a":  1.0
+                                             },
+                         "prototypeStartNodeID":  null,
+                         "flowStartingPoints":  [
+
+                                                ],
+                         "prototypeDevice":  {
+                                                 "type":  "NONE",
+                                                 "rotation":  "NONE"
+                                             }
+                     },
+                     {
+                         "id":  "47:735",
+                         "name":  "      ↳ Product Screens",
+                         "type":  "CANVAS",
+                         "scrollBehavior":  "SCROLLS",
+                         "explicitVariableModes":  {
+                                                       "VariableCollectionId:39:7914":  "1299:5"
+                                                   },
+                         "children":  [
+                                          {
+                                              "id":  "69:3345",
+                                              "name":  "🌙 Dark",
+                                              "type":  "SECTION",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "boundVariables":  {
+                                                                     "fills":  "",
+                                                                     "strokes":  ""
+                                                                 },
+                                              "explicitVariableModes":  {
+                                                                            "VariableCollectionId:39:7914":  "1299:5"
+                                                                        },
+                                              "children":  [
+
+                                                           ],
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}"
+                                                        ],
+                                              "strokes":  [
+                                                              "@{opacity=0.20000000298023224; blendMode=NORMAL; type=SOLID; color=; boundVariables=}"
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -1961.0,
+                                                                          "y":  -4760.0,
+                                                                          "width":  7328.0,
+                                                                          "height":  15370.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -1961.0,
+                                                                           "y":  -4760.0,
+                                                                           "width":  7328.0,
+                                                                           "height":  15370.0
+                                                                       },
+                                              "sectionContentsHidden":  false
+                                          },
+                                          {
+                                              "id":  "9926:12651",
+                                              "name":  "☀️ Light",
+                                              "type":  "SECTION",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "boundVariables":  {
+                                                                     "fills":  "",
+                                                                     "strokes":  ""
+                                                                 },
+                                              "explicitVariableModes":  {
+                                                                            "VariableCollectionId:39:7914":  "1299:4"
+                                                                        },
+                                              "children":  [
+
+                                                           ],
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}"
+                                                        ],
+                                              "strokes":  [
+                                                              "@{opacity=0.50; blendMode=NORMAL; type=SOLID; color=; boundVariables=}"
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -10746.0,
+                                                                          "y":  -4760.0,
+                                                                          "width":  7328.0,
+                                                                          "height":  15370.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -10746.0,
+                                                                           "y":  -4760.0,
+                                                                           "width":  7328.0,
+                                                                           "height":  15370.0
+                                                                       },
+                                              "sectionContentsHidden":  false
+                                          },
+                                          {
+                                              "id":  "15846:18812",
+                                              "name":  "Upgrade",
+                                              "type":  "INSTANCE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "boundVariables":  {
+                                                                     "fills":  ""
+                                                                 },
+                                              "explicitVariableModes":  {
+                                                                            "VariableCollectionId:39:7914":  "1299:5"
+                                                                        },
+                                              "componentId":  "15846:18743",
+                                              "overrides":  [
+
+                                                            ],
+                                              "children":  [
+
+                                                           ],
+                                              "blendMode":  "PASS_THROUGH",
+                                              "clipsContent":  true,
+                                              "background":  [
+                                                                 "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}",
+                                                                 "@{opacity=0.30000001192092896; blendMode=NORMAL; type=GRADIENT_LINEAR; gradientHandlePositions=System.Object[]; gradientStops=System.Object[]}"
+                                                             ],
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}",
+                                                            "@{opacity=0.30000001192092896; blendMode=NORMAL; type=GRADIENT_LINEAR; gradientHandlePositions=System.Object[]; gradientStops=System.Object[]}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "cornerRadius":  96.0,
+                                              "cornerSmoothing":  0.0,
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "backgroundColor":  {
+                                                                      "r":  0.0,
+                                                                      "g":  0.0,
+                                                                      "b":  0.0,
+                                                                      "a":  0.0
+                                                                  },
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -12742.0,
+                                                                          "y":  -4760.0,
+                                                                          "width":  1504.0,
+                                                                          "height":  1181.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -12742.0,
+                                                                           "y":  -4760.0,
+                                                                           "width":  1504.0,
+                                                                           "height":  1181.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          }
+                                      ],
+                         "backgroundColor":  {
+                                                 "r":  0.85402268171310425,
+                                                 "g":  0.83064645528793335,
+                                                 "b":  0.79791969060897827,
+                                                 "a":  1.0
+                                             },
+                         "prototypeStartNodeID":  null,
+                         "flowStartingPoints":  [
+
+                                                ],
+                         "prototypeDevice":  {
+                                                 "type":  "CUSTOM",
+                                                 "size":  {
+                                                              "width":  1512.0,
+                                                              "height":  982.0
+                                                          },
+                                                 "rotation":  "NONE"
+                                             }
+                     },
+                     {
+                         "id":  "0:1",
+                         "name":  "      ↳ Landing Page",
+                         "type":  "CANVAS",
+                         "scrollBehavior":  "SCROLLS",
+                         "children":  [
+                                          {
+                                              "id":  "9844:2403",
+                                              "name":  "🌙 Dark",
+                                              "type":  "SECTION",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "boundVariables":  {
+                                                                     "fills":  ""
+                                                                 },
+                                              "explicitVariableModes":  {
+                                                                            "VariableCollectionId:39:7914":  "1299:5"
+                                                                        },
+                                              "children":  [
+
+                                                           ],
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}"
+                                                        ],
+                                              "strokes":  [
+                                                              "@{opacity=0.10000000149011612; blendMode=NORMAL; type=SOLID; color=}"
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -992.0,
+                                                                          "y":  12.0,
+                                                                          "width":  1912.0,
+                                                                          "height":  5626.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -992.0,
+                                                                           "y":  12.0,
+                                                                           "width":  1912.0,
+                                                                           "height":  5626.0
+                                                                       },
+                                              "sectionContentsHidden":  false
+                                          },
+                                          {
+                                              "id":  "9844:2404",
+                                              "name":  "☀️ Light",
+                                              "type":  "SECTION",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "boundVariables":  {
+                                                                     "fills":  ""
+                                                                 },
+                                              "explicitVariableModes":  {
+                                                                            "VariableCollectionId:39:7914":  "1299:4"
+                                                                        },
+                                              "children":  [
+
+                                                           ],
+                                              "fills":  [
+                                                            "@{opacity=0.50; blendMode=NORMAL; type=SOLID; color=; boundVariables=}"
+                                                        ],
+                                              "strokes":  [
+                                                              "@{opacity=0.10000000149011612; blendMode=NORMAL; type=SOLID; color=}"
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -3259.0,
+                                                                          "y":  12.0,
+                                                                          "width":  1912.0,
+                                                                          "height":  5626.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -3259.0,
+                                                                           "y":  12.0,
+                                                                           "width":  1912.0,
+                                                                           "height":  5626.0
+                                                                       },
+                                              "sectionContentsHidden":  false
+                                          },
+                                          {
+                                              "id":  "15846:18875",
+                                              "name":  "Upgrade",
+                                              "type":  "INSTANCE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "boundVariables":  {
+                                                                     "fills":  ""
+                                                                 },
+                                              "explicitVariableModes":  {
+                                                                            "VariableCollectionId:39:7914":  "1299:5"
+                                                                        },
+                                              "componentId":  "15846:18743",
+                                              "overrides":  [
+
+                                                            ],
+                                              "children":  [
+
+                                                           ],
+                                              "blendMode":  "PASS_THROUGH",
+                                              "clipsContent":  true,
+                                              "background":  [
+                                                                 "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}",
+                                                                 "@{opacity=0.30000001192092896; blendMode=NORMAL; type=GRADIENT_LINEAR; gradientHandlePositions=System.Object[]; gradientStops=System.Object[]}"
+                                                             ],
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}",
+                                                            "@{opacity=0.30000001192092896; blendMode=NORMAL; type=GRADIENT_LINEAR; gradientHandlePositions=System.Object[]; gradientStops=System.Object[]}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "cornerRadius":  96.0,
+                                              "cornerSmoothing":  0.0,
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "backgroundColor":  {
+                                                                      "r":  0.0,
+                                                                      "g":  0.0,
+                                                                      "b":  0.0,
+                                                                      "a":  0.0
+                                                                  },
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -5019.0,
+                                                                          "y":  12.0,
+                                                                          "width":  1504.0,
+                                                                          "height":  1181.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -5019.0,
+                                                                           "y":  12.0,
+                                                                           "width":  1504.0,
+                                                                           "height":  1181.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          }
+                                      ],
+                         "backgroundColor":  {
+                                                 "r":  0.29803922772407532,
+                                                 "g":  0.31764706969261169,
+                                                 "b":  0.35686275362968445,
+                                                 "a":  1.0
+                                             },
+                         "prototypeStartNodeID":  null,
+                         "flowStartingPoints":  [
+
+                                                ],
+                         "prototypeDevice":  {
+                                                 "type":  "CUSTOM",
+                                                 "size":  {
+                                                              "width":  1512.0,
+                                                              "height":  982.0
+                                                          },
+                                                 "rotation":  "NONE"
+                                             }
+                     },
+                     {
+                         "id":  "171:1880",
+                         "name":  "---",
+                         "type":  "CANVAS",
+                         "scrollBehavior":  "SCROLLS",
+                         "children":  [
+
+                                      ],
+                         "backgroundColor":  {
+                                                 "r":  0.27356895804405212,
+                                                 "g":  0.27356895804405212,
+                                                 "b":  0.27356895804405212,
+                                                 "a":  1.0
+                                             },
+                         "prototypeStartNodeID":  null,
+                         "flowStartingPoints":  [
+
+                                                ],
+                         "prototypeDevice":  {
+                                                 "type":  "NONE",
+                                                 "rotation":  "NONE"
+                                             }
+                     },
+                     {
+                         "id":  "9926:24131",
+                         "name":  "Design System",
+                         "type":  "CANVAS",
+                         "scrollBehavior":  "SCROLLS",
+                         "children":  [
+
+                                      ],
+                         "backgroundColor":  {
+                                                 "r":  0.29803922772407532,
+                                                 "g":  0.31764706969261169,
+                                                 "b":  0.35686275362968445,
+                                                 "a":  1.0
+                                             },
+                         "prototypeStartNodeID":  null,
+                         "flowStartingPoints":  [
+
+                                                ],
+                         "prototypeDevice":  {
+                                                 "type":  "CUSTOM",
+                                                 "size":  {
+                                                              "width":  1512.0,
+                                                              "height":  982.0
+                                                          },
+                                                 "rotation":  "NONE"
+                                             }
+                     },
+                     {
+                         "id":  "47:2670",
+                         "name":  "      ↳ Components",
+                         "type":  "CANVAS",
+                         "scrollBehavior":  "SCROLLS",
+                         "explicitVariableModes":  {
+                                                       "VariableCollectionId:39:7914":  "1299:4"
+                                                   },
+                         "children":  [
+                                          {
+                                              "id":  "15846:18173",
+                                              "name":  "Button - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=8e3932ccca22e57238b3c92ee79d7361c4a7080f}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -3449.0,
+                                                                          "y":  -592.03350830078125,
+                                                                          "width":  1512.0,
+                                                                          "height":  1725.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -3449.0,
+                                                                           "y":  -592.03350830078125,
+                                                                           "width":  1512.0,
+                                                                           "height":  1725.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18174",
+                                              "name":  "Icon Button - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=ca6627a9fb25ec913234279f5bddb33b64443145}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -1758.0,
+                                                                          "y":  -592.03350830078125,
+                                                                          "width":  1512.0,
+                                                                          "height":  2707.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -1758.0,
+                                                                           "y":  -592.03350830078125,
+                                                                           "width":  1512.0,
+                                                                           "height":  2707.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18175",
+                                              "name":  "Input - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=53e2be77366c17ea347abad73d0436d30a88bd11}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -67.0,
+                                                                          "y":  -592.03350830078125,
+                                                                          "width":  1512.0,
+                                                                          "height":  3000.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -67.0,
+                                                                           "y":  -592.03350830078125,
+                                                                           "width":  1512.0,
+                                                                           "height":  3000.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18176",
+                                              "name":  "Tabs - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=1851183dcaa88e2a67082d6a87ca98a97c856778}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  1624.0,
+                                                                          "y":  2186.9665527343750,
+                                                                          "width":  1512.0,
+                                                                          "height":  918.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  1624.0,
+                                                                           "y":  2186.9665527343750,
+                                                                           "width":  1512.0,
+                                                                           "height":  918.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18177",
+                                              "name":  "Checkbox - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=12fe62e2daf97b20861e3c008e131c77258d8131}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  1624.0,
+                                                                          "y":  294.96649169921875,
+                                                                          "width":  1512.0,
+                                                                          "height":  686.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  1624.0,
+                                                                           "y":  294.96649169921875,
+                                                                           "width":  1512.0,
+                                                                           "height":  686.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18178",
+                                              "name":  "Switch - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=3c1f0c83129ee7aa0c00a95e42b63d31a288b4d8}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  1624.0,
+                                                                          "y":  -592.03350830078125,
+                                                                          "width":  1512.0,
+                                                                          "height":  748.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  1624.0,
+                                                                           "y":  -592.03350830078125,
+                                                                           "width":  1512.0,
+                                                                           "height":  748.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18179",
+                                              "name":  "Menu Item - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=a909d5fcd8fda5c60113868b068304602ff55008}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  1624.0,
+                                                                          "y":  1163.9664306640625,
+                                                                          "width":  1512.0,
+                                                                          "height":  884.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  1624.0,
+                                                                           "y":  1163.9664306640625,
+                                                                           "width":  1512.0,
+                                                                           "height":  884.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18180",
+                                              "name":  "AI Chatbox - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=6a18aead61efa79a0b1b4c0fc06cfefeed98b661}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  3315.0,
+                                                                          "y":  -592.03350830078125,
+                                                                          "width":  1512.0,
+                                                                          "height":  1298.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  3315.0,
+                                                                           "y":  -592.03350830078125,
+                                                                           "width":  1512.0,
+                                                                           "height":  1298.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18181",
+                                              "name":  "Message Bubble - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=0a076ce5e4aa7fc6cb46601e431f073f215c37d9}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  3315.0,
+                                                                          "y":  907.96649169921875,
+                                                                          "width":  1512.0,
+                                                                          "height":  757.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  3315.0,
+                                                                           "y":  907.96649169921875,
+                                                                           "width":  1512.0,
+                                                                           "height":  757.00006103515625
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18182",
+                                              "name":  "AI actions - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=3bac4ffb8f9652844d3de000837e98d990783d43}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  5006.0,
+                                                                          "y":  980.96649169921875,
+                                                                          "width":  1512.0,
+                                                                          "height":  860.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  5006.0,
+                                                                           "y":  980.96649169921875,
+                                                                           "width":  1512.0,
+                                                                           "height":  860.00006103515625
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18183",
+                                              "name":  "Switch - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=d7d7e66949553c4a9484fd1077f34deef34bf49a}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  5006.0,
+                                                                          "y":  -592.03350830078125,
+                                                                          "width":  1512.0,
+                                                                          "height":  1358.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  5006.0,
+                                                                           "y":  -592.03350830078125,
+                                                                           "width":  1512.0,
+                                                                           "height":  1358.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18184",
+                                              "name":  "View Switch - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=d37a0e9d9f0c7a9fc4f17b75c90f5e9a238c3ec8}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  5006.0,
+                                                                          "y":  2055.9665527343750,
+                                                                          "width":  1512.0,
+                                                                          "height":  710.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  5006.0,
+                                                                           "y":  2055.9665527343750,
+                                                                           "width":  1512.0,
+                                                                           "height":  710.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18185",
+                                              "name":  "Navbar - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=c5003381ec0659f98bec12ab39ffffb732e8c98c}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  6697.0,
+                                                                          "y":  -592.03350830078125,
+                                                                          "width":  1512.0,
+                                                                          "height":  710.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  6697.0,
+                                                                           "y":  -592.03350830078125,
+                                                                           "width":  1512.0,
+                                                                           "height":  710.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18186",
+                                              "name":  "Sidebar - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=1f8fecaf5cd42cf71ea1781f5f64f481def7987b}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  6697.0,
+                                                                          "y":  317.96649169921875,
+                                                                          "width":  1512.0,
+                                                                          "height":  1325.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  6697.0,
+                                                                           "y":  317.96649169921875,
+                                                                           "width":  1512.0,
+                                                                           "height":  1325.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18187",
+                                              "name":  "Code Block - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=ad66d637227f06aa00be92b1c37e94c6a782c414}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  6697.0,
+                                                                          "y":  1840.9664306640625,
+                                                                          "width":  1512.0,
+                                                                          "height":  747.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  6697.0,
+                                                                           "y":  1840.9664306640625,
+                                                                           "width":  1512.0,
+                                                                           "height":  746.99987792968750
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18188",
+                                              "name":  "Logo - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=18b955303018751584b68c73670269cee15f6198}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -5140.0,
+                                                                          "y":  -592.03350830078125,
+                                                                          "width":  1512.0,
+                                                                          "height":  747.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -5140.0,
+                                                                           "y":  -592.03350830078125,
+                                                                           "width":  1512.0,
+                                                                           "height":  747.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18189",
+                                              "name":  "Source - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=9494d339393ac5793b5e5ccda9284f21319adcdb}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  8388.0,
+                                                                          "y":  -592.03350830078125,
+                                                                          "width":  1512.0,
+                                                                          "height":  615.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  8388.0,
+                                                                           "y":  -592.03350830078125,
+                                                                           "width":  1512.0,
+                                                                           "height":  615.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18190",
+                                              "name":  "Response Options - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=61bab824b6233bee972203b1f36a142b5f5a77c8}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  8388.0,
+                                                                          "y":  222.96649169921875,
+                                                                          "width":  1512.0,
+                                                                          "height":  576.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  8388.0,
+                                                                           "y":  222.96649169921875,
+                                                                           "width":  1512.0,
+                                                                           "height":  576.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18191",
+                                              "name":  "Response Document - Scaled Raster Image",
+                                              "type":  "RECTANGLE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "blendMode":  "PASS_THROUGH",
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=IMAGE; scaleMode=FILL; imageRef=30ef4e337c8b8a1ba26d73b2353d07ac168f46ed}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  8388.0,
+                                                                          "y":  998.96649169921875,
+                                                                          "width":  1512.0,
+                                                                          "height":  634.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  8388.0,
+                                                                           "y":  998.96649169921875,
+                                                                           "width":  1512.0,
+                                                                           "height":  634.00006103515625
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          },
+                                          {
+                                              "id":  "15846:18938",
+                                              "name":  "Upgrade",
+                                              "type":  "INSTANCE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "boundVariables":  {
+                                                                     "fills":  ""
+                                                                 },
+                                              "explicitVariableModes":  {
+                                                                            "VariableCollectionId:39:7914":  "1299:5"
+                                                                        },
+                                              "componentId":  "15846:18743",
+                                              "overrides":  [
+                                                                "@{id=I15846:18938;15846:18797; overriddenFields=System.Object[]}"
+                                                            ],
+                                              "children":  [
+
+                                                           ],
+                                              "blendMode":  "PASS_THROUGH",
+                                              "clipsContent":  true,
+                                              "background":  [
+                                                                 "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}",
+                                                                 "@{opacity=0.30000001192092896; blendMode=NORMAL; type=GRADIENT_LINEAR; gradientHandlePositions=System.Object[]; gradientStops=System.Object[]}"
+                                                             ],
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}",
+                                                            "@{opacity=0.30000001192092896; blendMode=NORMAL; type=GRADIENT_LINEAR; gradientHandlePositions=System.Object[]; gradientStops=System.Object[]}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "cornerRadius":  96.0,
+                                              "cornerSmoothing":  0.0,
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "backgroundColor":  {
+                                                                      "r":  0.0,
+                                                                      "g":  0.0,
+                                                                      "b":  0.0,
+                                                                      "a":  0.0
+                                                                  },
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -6929.0,
+                                                                          "y":  -592.03350830078125,
+                                                                          "width":  1504.0,
+                                                                          "height":  1181.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -6929.0,
+                                                                           "y":  -592.03350830078125,
+                                                                           "width":  1504.0,
+                                                                           "height":  1181.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          }
+                                      ],
+                         "backgroundColor":  {
+                                                 "r":  0.84940278530120850,
+                                                 "g":  0.82007002830505371,
+                                                 "b":  0.79763913154602051,
+                                                 "a":  1.0
+                                             },
+                         "prototypeStartNodeID":  null,
+                         "flowStartingPoints":  [
+
+                                                ],
+                         "prototypeDevice":  {
+                                                 "type":  "NONE",
+                                                 "rotation":  "NONE"
+                                             }
+                     },
+                     {
+                         "id":  "39:4812",
+                         "name":  "      ↳ Icons",
+                         "type":  "CANVAS",
+                         "scrollBehavior":  "SCROLLS",
+                         "children":  [
+                                          {
+                                              "id":  "15846:19211",
+                                              "name":  "Upgrade",
+                                              "type":  "INSTANCE",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "boundVariables":  {
+                                                                     "fills":  ""
+                                                                 },
+                                              "explicitVariableModes":  {
+                                                                            "VariableCollectionId:39:7914":  "1299:5"
+                                                                        },
+                                              "componentId":  "15846:18743",
+                                              "overrides":  [
+                                                                "@{id=I15846:19211;15846:18797; overriddenFields=System.Object[]}"
+                                                            ],
+                                              "children":  [
+
+                                                           ],
+                                              "blendMode":  "PASS_THROUGH",
+                                              "clipsContent":  true,
+                                              "background":  [
+                                                                 "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}",
+                                                                 "@{opacity=0.30000001192092896; blendMode=NORMAL; type=GRADIENT_LINEAR; gradientHandlePositions=System.Object[]; gradientStops=System.Object[]}"
+                                                             ],
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}",
+                                                            "@{opacity=0.30000001192092896; blendMode=NORMAL; type=GRADIENT_LINEAR; gradientHandlePositions=System.Object[]; gradientStops=System.Object[]}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "cornerRadius":  96.0,
+                                              "cornerSmoothing":  0.0,
+                                              "strokeWeight":  1.0,
+                                              "strokeAlign":  "INSIDE",
+                                              "backgroundColor":  {
+                                                                      "r":  0.0,
+                                                                      "g":  0.0,
+                                                                      "b":  0.0,
+                                                                      "a":  0.0
+                                                                  },
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -596.0,
+                                                                          "y":  -2001.0,
+                                                                          "width":  1504.0,
+                                                                          "height":  1181.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -596.0,
+                                                                           "y":  -2001.0,
+                                                                           "width":  1504.0,
+                                                                           "height":  1181.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          }
+                                      ],
+                         "backgroundColor":  {
+                                                 "r":  0.27356895804405212,
+                                                 "g":  0.27356895804405212,
+                                                 "b":  0.27356895804405212,
+                                                 "a":  1.0
+                                             },
+                         "prototypeStartNodeID":  null,
+                         "flowStartingPoints":  [
+
+                                                ],
+                         "prototypeDevice":  {
+                                                 "type":  "NONE",
+                                                 "rotation":  "NONE"
+                                             }
+                     },
+                     {
+                         "id":  "9926:25416",
+                         "name":  "---",
+                         "type":  "CANVAS",
+                         "scrollBehavior":  "SCROLLS",
+                         "children":  [
+
+                                      ],
+                         "backgroundColor":  {
+                                                 "r":  0.27356895804405212,
+                                                 "g":  0.27356895804405212,
+                                                 "b":  0.27356895804405212,
+                                                 "a":  1.0
+                                             },
+                         "prototypeStartNodeID":  null,
+                         "flowStartingPoints":  [
+
+                                                ],
+                         "prototypeDevice":  {
+                                                 "type":  "NONE",
+                                                 "rotation":  "NONE"
+                                             }
+                     },
+                     {
+                         "id":  "122:2832",
+                         "name":  "Cover",
+                         "type":  "CANVAS",
+                         "scrollBehavior":  "SCROLLS",
+                         "children":  [
+                                          {
+                                              "id":  "122:2833",
+                                              "name":  "Cover",
+                                              "type":  "FRAME",
+                                              "scrollBehavior":  "SCROLLS",
+                                              "boundVariables":  {
+                                                                     "fills":  ""
+                                                                 },
+                                              "explicitVariableModes":  {
+                                                                            "VariableCollectionId:39:7914":  "1299:5"
+                                                                        },
+                                              "children":  [
+
+                                                           ],
+                                              "blendMode":  "PASS_THROUGH",
+                                              "clipsContent":  true,
+                                              "background":  [
+                                                                 "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}"
+                                                             ],
+                                              "fills":  [
+                                                            "@{blendMode=NORMAL; type=SOLID; color=; boundVariables=}"
+                                                        ],
+                                              "strokes":  [
+
+                                                          ],
+                                              "strokeWeight":  1.2698413133621216,
+                                              "strokeAlign":  "INSIDE",
+                                              "backgroundColor":  {
+                                                                      "r":  0.24705882370471954,
+                                                                      "g":  0.23921568691730499,
+                                                                      "b":  0.23529411852359772,
+                                                                      "a":  1.0
+                                                                  },
+                                              "absoluteBoundingBox":  {
+                                                                          "x":  -949.0,
+                                                                          "y":  -0.50,
+                                                                          "width":  1920.0,
+                                                                          "height":  1080.0
+                                                                      },
+                                              "absoluteRenderBounds":  {
+                                                                           "x":  -949.0,
+                                                                           "y":  -0.50,
+                                                                           "width":  1920.0,
+                                                                           "height":  1080.0
+                                                                       },
+                                              "constraints":  {
+                                                                  "vertical":  "TOP",
+                                                                  "horizontal":  "LEFT"
+                                                              },
+                                              "exportSettings":  [
+                                                                     "@{suffix=; format=PNG; constraint=}"
+                                                                 ],
+                                              "effects":  [
+
+                                                          ],
+                                              "interactions":  [
+
+                                                               ],
+                                              "complexStrokeProperties":  {
+                                                                              "strokeType":  "BASIC"
+                                                                          }
+                                          }
+                                      ],
+                         "backgroundColor":  {
+                                                 "r":  0.27356895804405212,
+                                                 "g":  0.27356895804405212,
+                                                 "b":  0.27356895804405212,
+                                                 "a":  1.0
+                                             },
+                         "prototypeStartNodeID":  null,
+                         "flowStartingPoints":  [
+
+                                                ],
+                         "prototypeDevice":  {
+                                                 "type":  "NONE",
+                                                 "rotation":  "NONE"
+                                             }
+                     }
+                 ]
+}

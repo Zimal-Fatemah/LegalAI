@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Colors */
+  --color-teal: #1d9b8e;
+  --color-teal-light: #e8f5f3;
+  --color-dark: #0a1c1a;
+  --color-cream: #faf9f6;
+  --color-border: #e2e0dc;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+@keyframes typingDot {
+  0%, 60%, 100% { opacity: 0.2; transform: translateY(0); }
+  30% { opacity: 1; transform: translateY(-3px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+/* Typography */
+@layer base {
+  body {
+    @apply bg-discourse-bg text-discourse-dark;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+
+  h1 { @apply text-3xl; }
+  h2 { @apply text-2xl; }
+  h3 { @apply text-xl; }
+  h4 { @apply text-lg; }
+
+  code, pre {
+    font-family: 'Fira Code', 'Courier New', monospace;
+  }
+}
+
+/* Animations */
+.typing-dot {
+  animation: typingDot 1.2s infinite;
+}
+
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom Components */
+.message-bubble-user {
+  @apply bg-discourse-teal text-white rounded-lg rounded-tr-sm px-4 py-3 shadow-sm max-w-xs;
+}
+
+.message-bubble-ai {
+  @apply bg-white border border-discourse-border rounded-lg p-4 shadow-sm;
+}
+
+.button-primary {
+  @apply px-4 py-2 bg-discourse-teal hover:bg-discourse-teal/90 text-white rounded-lg font-medium transition-colors shadow-sm;
+}
+
+.button-secondary {
+  @apply px-4 py-2 bg-discourse-input hover:bg-discourse-border text-discourse-dark rounded-lg font-medium transition-colors;
+}
+
+.button-ghost {
+  @apply px-4 py-2 text-discourse-gray hover:bg-discourse-input rounded-lg font-medium transition-colors;
+}
+
+.input-field {
+  @apply bg-white border border-discourse-border rounded-lg p-3 focus:outline-none focus:border-discourse-teal focus:ring-2 focus:ring-discourse-teal/10 transition-all;
+}
