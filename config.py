@@ -25,10 +25,11 @@ UPLOADS_DIR.mkdir(exist_ok=True)
 # ============================================
 # Use Groq for production (free tier, fast)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
-# config.py
 
+# config.py
+# GROQ (cloud) settings
 TEMPERATURE = 0.3
-MAX_TOKENS = 4096
+GROQ_MAX_TOKENS = 8192
 GROQ_MODEL_NAME = "llama-3.3-70b-versatile"  # or "mixtral-8x7b-32768"  # Latest Llama 3.3 70B (recommended) # Options: llama3-70b-8192, llama3-8b-8192, mixtral-8x7b-32768
 
 # ============================================
@@ -37,8 +38,7 @@ GROQ_MODEL_NAME = "llama-3.3-70b-versatile"  # or "mixtral-8x7b-32768"  # Latest
 # For local development (requires Ollama running)
 LLM_MODEL_NAME = "mistral"  # Change to your Ollama model name
 LLM_MODEL_PATH = MODELS_DIR / "model"
-TEMPERATURE = 0.7
-MAX_TOKENS = 512
+LOCAL_MAX_TOKENS = 512
 
 # ============================================
 # Embedding Configuration
@@ -71,6 +71,13 @@ PDF_UPLOADS_PATH = UPLOADS_DIR
 # ============================================
 TOP_K_DOCUMENTS = 3  # Number of documents to retrieve for context
 SIMILARITY_THRESHOLD = 0.3  # Minimum similarity score for document retrieval
+
+# Select MAX_TOKENS based on available configuration (cloud vs local)
+try:
+    # Use GROQ_MAX_TOKENS if API key present, otherwise local
+    MAX_TOKENS = GROQ_MAX_TOKENS if GROQ_API_KEY else LOCAL_MAX_TOKENS
+except NameError:
+    MAX_TOKENS = 512
 
 # ============================================
 # Mode-Specific Prompts (Stolen from friend's project)

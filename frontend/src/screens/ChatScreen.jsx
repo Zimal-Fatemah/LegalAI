@@ -706,22 +706,23 @@ export default function ChatScreen({ mode, onModeChange, messages, setMessages, 
 
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
-    onUserMessage?.(input);
     const userMessage = { content: input, isUser: true };
-    setMessages(prev => [...prev, userMessage]);
+    const newMessages = [...messages, userMessage];
+    setMessages(newMessages);
+    onUserMessage?.(newMessages);
     setInput('');
     setIsLoading(true);
     try {
       const response = await api.sendMessage(input, mode);
-      setMessages(prev => [
-        ...prev,
-        { content: response.answer, isUser: false, sources: response.sources, mode },
-      ]);
+      const botMessage = { content: response.answer, isUser: false, sources: response.sources, mode };
+      const withBot = [...newMessages, botMessage];
+      setMessages(withBot);
+      onUserMessage?.(withBot);
     } catch {
-      setMessages(prev => [
-        ...prev,
-        { content: 'Sorry, I encountered an error. Please make sure the backend is running.', isUser: false },
-      ]);
+      const errMsg = { content: 'Sorry, I encountered an error. Please make sure the backend is running.', isUser: false };
+      const withErr = [...newMessages, errMsg];
+      setMessages(withErr);
+      onUserMessage?.(withErr);
     } finally {
       setIsLoading(false);
     }

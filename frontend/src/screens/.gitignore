@@ -1,0 +1,1 @@
+.env\n__pycache__/\nnode_modules/\nfrontend/node_modules/\n.DS_Store\ndata/vector_store/\n*.sqlite3\n.env.example\n

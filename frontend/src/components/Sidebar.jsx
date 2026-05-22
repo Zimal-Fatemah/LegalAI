@@ -1,6 +1,6 @@
 import { MessageSquare, Plus, Search, FolderOpen, Settings } from 'lucide-react';
 
-export default function Sidebar({ currentScreen, onScreenChange, recentChats, onRecentChatClick, onNewChat, darkMode }) {
+export default function Sidebar({ currentScreen, onScreenChange, recentChats, onRecentChatClick, onDeleteRecentChat, onNewChat, darkMode }) {
   return (
     <div className={`w-64 flex flex-col h-full overflow-hidden border-r transition-colors duration-200 ${
       darkMode 
@@ -72,18 +72,24 @@ export default function Sidebar({ currentScreen, onScreenChange, recentChats, on
         </h3>
         <div className="space-y-1">
           {recentChats.map((chat, idx) => (
-            <button
-              key={idx}
-              onClick={onRecentChatClick}
-              className={`w-full flex items-center gap-2 px-3 py-2.5 text-left text-sm rounded-lg transition-colors group ${
-                darkMode 
-                  ? 'text-gray-300 hover:bg-[#252525]' 
-                  : 'text-discourse-dark hover:bg-discourse-input'
-              }`}
-            >
-              <MessageSquare size={14} className={`flex-shrink-0 ${darkMode ? 'text-gray-500' : 'text-discourse-gray'}`} />
-              <span className="truncate flex-1">{chat}</span>
-            </button>
+            <div key={idx} className="w-full flex items-center gap-2 px-3 py-2.5 text-left text-sm rounded-lg transition-colors group">
+              <button
+                onClick={() => onRecentChatClick?.(chat)}
+                className={`flex-1 flex items-center gap-2 text-left ${
+                  darkMode ? 'text-gray-300 hover:bg-[#252525]' : 'text-discourse-dark hover:bg-discourse-input'
+                }`}
+              >
+                <MessageSquare size={14} className={`flex-shrink-0 ${darkMode ? 'text-gray-500' : 'text-discourse-gray'}`} />
+                <span className="truncate flex-1">{chat.title}</span>
+              </button>
+              <button
+                onClick={(e) => { e.stopPropagation(); onDeleteRecentChat?.(chat.title); }}
+                title="Delete chat"
+                className={`ml-2 text-xs px-2 py-1 rounded ${darkMode ? 'text-gray-400 hover:bg-[#2a2a2a]' : 'text-discourse-gray hover:bg-discourse-input'}`}
+              >
+                ×
+              </button>
+            </div>
           ))}
         </div>
       </div>

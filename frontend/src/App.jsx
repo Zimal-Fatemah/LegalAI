@@ -12,7 +12,15 @@ function getInitialRecentChats() {
     const raw = localStorage.getItem(RECENT_CHATS_KEY);
     if (!raw) return [];
     const parsed = JSON.parse(raw);
-    return Array.isArray(parsed) ? parsed : [];
+    if (!Array.isArray(parsed)) return [];
+    // Backwards compatibility: convert string entries into objects
+    return parsed.map((item) => {
+      if (typeof item === 'string') return { title: item, messages: [] };
+      return {
+        title: item.title || (typeof item === 'string' ? item : 'Untitled'),
+        messages: Array.isArray(item.messages) ? item.messages : [],
+      };
+    });
   } catch {
     return [];
   }
@@ -46,15 +54,26 @@ function App() {
     // Optional: Show notification or refresh something
   };
 
-  const handleUserMessage = (content) => {
-    const title = content.replace(/\s+/g, ' ').trim().slice(0, 60);
-    if (!title) return;
+  const handleUserMessage = (messagesArray) => {
+    // messagesArray expected to be the full messages array for the chat
+    if (!Array.isArray(messagesArray) || messagesArray.length === 0) return;
 
-    setRecentChats((prev) => [title, ...prev.filter((chat) => chat !== title)].slice(0, 20));
+    const userMsg = messagesArray.find(m => m.isUser) || messagesArray[0];
+    let title = (userMsg && userMsg.content) ? userMsg.content : 'Untitled';
+    title = title.replace(/\s+/g, ' ').trim().slice(0, 60) || 'Untitled';
+
+    const chatObj = { title, messages: messagesArray };
+    setRecentChats((prev) => [chatObj, ...prev.filter((chat) => chat.title !== title)].slice(0, 20));
   };
 
-  const handleRecentChatClick = () => {
+  const handleRecentChatClick = (chat) => {
+    if (!chat) return;
+    setMessages(Array.isArray(chat.messages) ? chat.messages : []);
     setCurrentScreen('chat');
+  };
+
+  const handleDeleteRecentChat = (title) => {
+    setRecentChats(prev => prev.filter(c => c.title !== title));
   };
 
   return (
@@ -64,6 +83,7 @@ function App() {
         onScreenChange={setCurrentScreen}
         recentChats={recentChats}
         onRecentChatClick={handleRecentChatClick}
+        onDeleteRecentChat={handleDeleteRecentChat}
         onNewChat={handleNewChat}
         darkMode={settings.darkMode}
       />
