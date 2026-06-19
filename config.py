@@ -82,7 +82,7 @@ SIMILARITY_THRESHOLD = 0.3  # Minimum similarity score for document retrieval
 MAX_TOKENS = GROQ_MAX_TOKENS if GROQ_API_KEY else LOCAL_MAX_TOKENS
 
 # ============================================
-# Mode-Specific Prompts (Stolen from friend's project)
+# Mode-Specific Prompts
 # ============================================
 MODE_PROMPTS = {
     "Student Mode": """You are a helpful legal assistant for law students. 
