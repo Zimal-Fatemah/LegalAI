@@ -220,6 +220,26 @@ import logging
 logging.basicConfig(level=logging.DEBUG)  # In main.py
 ```
 
+## 🚀 Deployment
+
+This project is set up for a split deploy:
+
+### Railway backend
+
+Set these environment variables in Railway:
+- `GROQ_API_KEY`
+- `ALLOWED_ORIGINS=https://your-frontend.vercel.app`
+- `SUPABASE_URL` and `SUPABASE_SERVICE_KEY` only if you use Supabase
+
+Leave `INTERNAL_API_KEY` empty unless you also add a real frontend auth flow. The current frontend does not send a secret key, so setting it will block requests.
+
+### Vercel frontend
+
+Set this environment variable in Vercel:
+- `VITE_API_URL=https://your-backend.railway.app`
+
+The frontend builds from `frontend/` and expects the backend API at `${VITE_API_URL}/api`.
+
 ## 📚 Resources
 
 - [LangChain Documentation](https://python.langchain.com/)

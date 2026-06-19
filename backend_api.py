@@ -3,34 +3,77 @@ FastAPI backend for LexAI - Connects frontend to RAG system
 Run with: uvicorn backend_api:app --reload --port 8000
 """
 
-from fastapi import FastAPI, HTTPException, UploadFile, File
+from contextlib import asynccontextmanager
+from fastapi import FastAPI, HTTPException, UploadFile, File, Header, Request, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any
-import shutil
+from collections import defaultdict, deque
 import json
-import ast
 import re
 import os
 from pathlib import Path
+from time import time
 
-from groq_llm import GroqLLMManager, GroqRAGChain, MODE_PROMPTS
-from config import UPLOADS_DIR
+from groq_llm import GroqLLMManager, MODE_PROMPTS
+from config import UPLOADS_DIR, ALLOWED_ORIGINS, INTERNAL_API_KEY
 import logging
-
 logger = logging.getLogger(__name__)
 
 # Initialize FastAPI
-app = FastAPI(title="LexAI API", description="Pakistani Legal RAG System")
+RATE_LIMITS = defaultdict(deque)
+
+
+def check_rate_limit(request: Request, limit: int, window_seconds: int = 60):
+    client = getattr(getattr(request, "client", None), "host", "unknown")
+    now = time()
+    bucket = RATE_LIMITS[(client, request.url.path)]
+    while bucket and now - bucket[0] > window_seconds:
+        bucket.popleft()
+    if len(bucket) >= limit:
+        raise HTTPException(429, "Too many requests. Please try again later.")
+    bucket.append(now)
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    global rag_system, groq_manager
+    logger.info("Initializing LexAI...")
+
+    try:
+        groq_manager = GroqLLMManager()
+        logger.info("Groq LLM ready!")
+    except Exception as e:
+        logger.error("Groq init failed: %s", e, exc_info=True)
+        groq_manager = None
+
+    try:
+        from rag_system import RAGSystem
+        from config import VECTOR_STORE_PATH
+        if VECTOR_STORE_PATH.exists():
+            logger.info("Loading existing vector store...")
+            rag_system = RAGSystem(use_groq=True)
+            rag_system.initialize_from_saved_vector_store()
+            logger.info("Vector store loaded!")
+        else:
+            logger.warning("No vector store — running in direct Groq mode.")
+    except Exception as e:
+        logger.warning("Vector store load failed (direct Groq mode active): %s", e, exc_info=True)
+        rag_system = None
+
+    yield
+
+
+# Initialize FastAPI
+app = FastAPI(title="LexAI API", description="Pakistani Legal RAG System", lifespan=lifespan)
 
 # CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
+    allow_origins=ALLOWED_ORIGINS or ["http://localhost:5173", "http://localhost:5176"],
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
+    allow_headers=["Content-Type", "X-API-Key"],
 )
 
 # Global instances
@@ -41,6 +84,14 @@ groq_manager = None        # always available — direct Groq access
 def normalize_mode(mode: str) -> str:
     """Convert any mode variant to lowercase key for MODE_PROMPTS."""
     return mode.lower().replace(" mode", "").strip()   # "Student Mode" → "student"
+
+
+def verify_api_key(x_api_key: Optional[str] = Header(default=None)):
+    if not INTERNAL_API_KEY:
+        return True
+    if x_api_key != INTERNAL_API_KEY:
+        raise HTTPException(403, "Forbidden")
+    return True
 
 # Request/Response Models
 class ChatRequest(BaseModel):
@@ -180,12 +231,9 @@ def _extract_json_array(text: str):
     except Exception:
         pass
 
-    try:
-        parsed = ast.literal_eval(candidate)
-        if isinstance(parsed, list) and len(parsed) > 0:
-            return _validate_and_fix_questions(parsed)
-    except Exception:
-        pass
+    # If candidate uses single quotes for keys/strings, try converting to double quotes safely
+    if "'" in candidate and '"' not in candidate:
+        candidate = candidate.replace("'", '"')
 
     # If candidate uses single quotes for keys/strings, try converting to double quotes safely
     if "'" in candidate and '"' not in candidate:
@@ -281,36 +329,6 @@ def _direct_groq_query(message: str, mode: str) -> dict:
     }
 
 
-# Initialize Groq on startup (always runs, no PDFs needed)
-@app.on_event("startup")
-async def startup_event():
-    global rag_system, groq_manager
-    logger.info("Initializing LexAI...")
-
-    # Always initialize Groq — this never fails without PDFs
-    try:
-        groq_manager = GroqLLMManager()
-        logger.info("Groq LLM ready!")
-    except Exception as e:
-        logger.error("Groq init failed: %s", e)
-        groq_manager = None
-
-    # Try loading vector store if it exists
-    try:
-        from rag_system import RAGSystem
-        from config import VECTOR_STORE_PATH
-        if VECTOR_STORE_PATH.exists():
-            logger.info("Loading existing vector store...")
-            rag_system = RAGSystem(use_groq=True)
-            rag_system.initialize_from_saved_vector_store()
-            logger.info("Vector store loaded!")
-        else:
-            logger.warning("No vector store — running in direct Groq mode.")
-    except Exception as e:
-        logger.warning("Vector store load failed (direct Groq mode active): %s", e)
-        rag_system = None
-
-
 # Health check
 @app.get("/api/health")
 async def health_check():
@@ -327,8 +345,9 @@ async def get_modes():
 
 # Upload PDF endpoint
 @app.post("/api/upload")
-async def upload_pdf(file: UploadFile = File(...)):
+async def upload_pdf(request: Request, file: UploadFile = File(...), _auth: bool = Depends(verify_api_key)):
     global rag_system
+    check_rate_limit(request, 5, 60)
 
     if not file.filename:
         raise HTTPException(400, "Missing file name")
@@ -338,8 +357,12 @@ async def upload_pdf(file: UploadFile = File(...)):
         raise HTTPException(400, "Only PDF files are supported")
 
     file_path = UPLOADS_DIR / safe_filename
+    contents = await file.read()
+    if len(contents) > 10 * 1024 * 1024:
+        raise HTTPException(413, "File too large")
+
     with open(file_path, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
+        buffer.write(contents)
 
     pdf_files = list(UPLOADS_DIR.glob("*.pdf"))
     previous_rag_system = rag_system
@@ -355,16 +378,17 @@ async def upload_pdf(file: UploadFile = File(...)):
             message=f"File uploaded and {len(pdf_files)} PDF(s) indexed successfully!"
         )
     except Exception as e:
+        logger.error("Upload indexing failed: %s", e, exc_info=True)
         rag_system = previous_rag_system
         return UploadResponse(
             filename=safe_filename,
             status="error",
-            message=f"File saved but indexing failed: {str(e)}"
+            message="File saved but indexing failed."
         )
 
 # Get list of uploaded PDFs
 @app.get("/api/documents")
-async def get_documents():
+async def get_documents(_auth: bool = Depends(verify_api_key)):
     pdf_files = list(UPLOADS_DIR.glob("*.pdf"))
     return {
         "documents": [
@@ -375,7 +399,7 @@ async def get_documents():
 
 # ── CHAT ENDPOINT ────────────────────────────────────────────
 @app.post("/api/chat", response_model=ChatResponse)
-async def chat(request: ChatRequest):
+async def chat(request: Request, body: ChatRequest, _auth: bool = Depends(verify_api_key)):
     """
     Send a message. Works in two modes:
     - No PDFs uploaded → calls Groq directly (fast, ~2-3s)
@@ -384,16 +408,18 @@ async def chat(request: ChatRequest):
     if groq_manager is None:
         raise HTTPException(503, "Groq not initialized. Check your GROQ_API_KEY.")
 
-    mode_key = normalize_mode(request.mode)
+    check_rate_limit(request, 20, 60)
+
+    mode_key = normalize_mode(body.mode)
 
     try:
         if rag_system is None:
             # ── Direct Groq (no docs) ────────────────────────
-            result = _direct_groq_query(request.message, request.mode)
+            result = _direct_groq_query(body.message, body.mode)
         else:
             # ── RAG + Groq ───────────────────────────────────
             result = rag_system.query(
-                question=request.message,
+                question=body.message,
                 mode=mode_key,
                 show_sources=True,
             )
@@ -411,26 +437,28 @@ async def chat(request: ChatRequest):
         return ChatResponse(
             answer=result["answer"],
             sources=sources,
-            mode_used=request.mode,
+            mode_used=body.mode,
         )
 
     except Exception as e:
-        logger.error("Chat error: %s", e)
-        raise HTTPException(500, f"Error processing query: {str(e)}")
+        logger.error("Chat error: %s", e, exc_info=True)
+        raise HTTPException(500, "Something went wrong. Please try again.")
 
 
 # ── QUIZ ENDPOINT ────────────────────────────────────────────
 @app.post("/api/quiz", response_model=QuizResponse)
-async def generate_quiz(request: QuizRequest):
+async def generate_quiz(request: Request, body: QuizRequest, _auth: bool = Depends(verify_api_key)):
     """Generate quiz — uses RAG if docs available, else Groq direct."""
     if groq_manager is None:
         raise HTTPException(503, "Groq not initialized. Check your GROQ_API_KEY.")
 
-    mode_key = normalize_mode(request.mode)
-    num_questions = max(1, min(request.num_questions, 20))
+    check_rate_limit(request, 10, 60)
 
-    prompt = f"""Create a {num_questions}-question multiple-choice quiz on: {request.topic}
-Difficulty: {request.difficulty}
+    mode_key = normalize_mode(body.mode)
+    num_questions = max(1, min(body.num_questions, 20))
+
+    prompt = f"""Create a {num_questions}-question multiple-choice quiz on: {body.topic}
+Difficulty: {body.difficulty}
 
 Return ONLY a valid JSON array, no prose or markdown. Each item must have exactly:
 - question (string)
@@ -444,7 +472,7 @@ IMPORTANT: Append the exact marker <<END_OF_QUIZ>> after the JSON array and noth
 
     try:
         if rag_system is None:
-            result = _direct_groq_query(prompt, request.mode)
+            result = _direct_groq_query(prompt, body.mode)
         else:
             result = rag_system.query(
                 question=prompt,
@@ -470,7 +498,7 @@ Content: {raw_answer}"""
             # Ask the model to append our end marker so we can safely trim responses
             repair_prompt = repair_prompt + "\n\nIMPORTANT: Append the exact marker <<END_OF_QUIZ>> after the JSON array and nothing else."
             if rag_system is None:
-                repaired = _direct_groq_query(repair_prompt, request.mode)
+                repaired = _direct_groq_query(repair_prompt, body.mode)
             else:
                 repaired = rag_system.query(question=repair_prompt, mode=mode_key, show_sources=False)
             repaired_ans = repaired.get("answer", "")
@@ -508,13 +536,15 @@ Content: {raw_answer}"""
         return QuizResponse(topic=request.topic, difficulty=request.difficulty, questions=questions)
 
     except Exception as e:
-        raise HTTPException(500, f"Quiz generation failed: {str(e)}")
+        logger.error("Quiz generation failed: %s", e, exc_info=True)
+        raise HTTPException(500, "Something went wrong. Please try again.")
 
 
 # Delete document endpoint
 @app.delete("/api/documents/{filename}")
-async def delete_document(filename: str):
+async def delete_document(request: Request, filename: str, _auth: bool = Depends(verify_api_key)):
     global rag_system
+    check_rate_limit(request, 10, 60)
     file_path = UPLOADS_DIR / filename
     if file_path.exists():
         file_path.unlink()

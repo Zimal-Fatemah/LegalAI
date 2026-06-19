@@ -25,6 +25,12 @@ UPLOADS_DIR.mkdir(exist_ok=True)
 # ============================================
 # Use Groq for production (free tier, fast)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+INTERNAL_API_KEY = os.getenv("INTERNAL_API_KEY")
+ALLOWED_ORIGINS = [
+    origin.strip()
+    for origin in os.getenv("ALLOWED_ORIGINS", "").split(",")
+    if origin.strip()
+]
 
 # config.py
 # GROQ (cloud) settings
@@ -73,11 +79,7 @@ TOP_K_DOCUMENTS = 3  # Number of documents to retrieve for context
 SIMILARITY_THRESHOLD = 0.3  # Minimum similarity score for document retrieval
 
 # Select MAX_TOKENS based on available configuration (cloud vs local)
-try:
-    # Use GROQ_MAX_TOKENS if API key present, otherwise local
-    MAX_TOKENS = GROQ_MAX_TOKENS if GROQ_API_KEY else LOCAL_MAX_TOKENS
-except NameError:
-    MAX_TOKENS = 512
+MAX_TOKENS = GROQ_MAX_TOKENS if GROQ_API_KEY else LOCAL_MAX_TOKENS
 
 # ============================================
 # Mode-Specific Prompts (Stolen from friend's project)

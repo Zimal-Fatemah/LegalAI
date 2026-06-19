@@ -34,6 +34,11 @@ wheels/
 *~
 .DS_Store
 
+# JavaScript/Frontend build output
+node_modules/
+frontend/node_modules/
+frontend/dist/
+
 # Data
 data/uploads/  # Keep folder but ignore PDFs
 !data/uploads/.gitkeep

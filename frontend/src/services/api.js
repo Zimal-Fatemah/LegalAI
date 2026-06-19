@@ -1,9 +1,10 @@
 // API service for LexAI backend
-const API_BASE = 'http://localhost:8000/api';
+const API_BASE = (import.meta.env.VITE_API_URL || 'http://localhost:8000').replace(/\/$/, '') + '/api';
 
 export const api = {
   async health() {
-    const response = await fetch(`${API_BASE}/health`);
+    const response = await fetch(`${API_BASE}/health`, {
+    });
     return response.json();
   },
 
@@ -45,7 +46,8 @@ export const api = {
   },
 
   async getDocuments() {
-    const response = await fetch(`${API_BASE}/documents`);
+    const response = await fetch(`${API_BASE}/documents`, {
+    });
     return response.json();
   },
 
@@ -57,7 +59,8 @@ export const api = {
   },
 
   async getModes() {
-    const response = await fetch(`${API_BASE}/modes`);
+    const response = await fetch(`${API_BASE}/modes`, {
+    });
     return response.json();
   },
 
