@@ -21,9 +21,6 @@ MODELS_DIR.mkdir(exist_ok=True)
 UPLOADS_DIR.mkdir(exist_ok=True)
 
 # ============================================
-# LLM Configuration - GROQ (Cloud)
-# ============================================
-# Use Groq for production (free tier, fast)
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 INTERNAL_API_KEY = os.getenv("INTERNAL_API_KEY")
 ALLOWED_ORIGINS = [
@@ -82,7 +79,6 @@ SIMILARITY_THRESHOLD = 0.3  # Minimum similarity score for document retrieval
 MAX_TOKENS = GROQ_MAX_TOKENS if GROQ_API_KEY else LOCAL_MAX_TOKENS
 
 # ============================================
-# Mode-Specific Prompts
 # ============================================
 MODE_PROMPTS = {
     "Student Mode": """You are a helpful legal assistant for law students. 
