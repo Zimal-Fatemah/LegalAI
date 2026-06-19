@@ -70,7 +70,7 @@ app = FastAPI(title="LexAI API", description="Pakistani Legal RAG System", lifes
 # CORS for frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS or ["http://localhost:5173", "http://localhost:5176"],
+    allow_origins=ALLOWED_ORIGINS or ["http://localhost:5173", "https://legal-ai-coral-two.vercel.app"],
     allow_credentials=False,
     allow_methods=["GET", "POST", "DELETE", "OPTIONS"],
     allow_headers=["Content-Type", "X-API-Key"],
