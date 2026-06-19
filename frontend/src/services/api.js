@@ -1,5 +1,5 @@
 // API service for LexAI backend
-const API_BASE = (import.meta.env.VITE_API_URL || 'http://localhost:8000').replace(/\/$/, '') + '/api';
+const API_BASE = (import.meta.env.VITE_API_URL || 'https://legal-ai-0.up.railway.app).replace(/\/$/, '') + '/api';
 
 export const api = {
   async health() {
