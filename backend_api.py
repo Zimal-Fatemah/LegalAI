@@ -67,10 +67,13 @@ async def lifespan(app: FastAPI):
 # Initialize FastAPI
 app = FastAPI(title="LexAI API", description="Pakistani Legal RAG System", lifespan=lifespan)
 
-# CORS for frontend
+# CORS for frontend — no trailing slash, OPTIONS preflight handled by middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=ALLOWED_ORIGINS or ["http://localhost:5173", "https://legal-puc60b072-zimalfatemahh-8355s-projects.vercel.app/"],
+    allow_origins=ALLOWED_ORIGINS or [
+        "http://localhost:5173",
+        "https://legal-puc60b072-zimalfatemahh-8355s-projects.vercel.app",
+    ],
     allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -86,7 +89,10 @@ def normalize_mode(mode: str) -> str:
     return mode.lower().replace(" mode", "").strip()   # "Student Mode" → "student"
 
 
-def verify_api_key(x_api_key: Optional[str] = Header(default=None)):
+def verify_api_key(request: Request, x_api_key: Optional[str] = Header(default=None)):
+    # Allow OPTIONS preflight through — CORS middleware handles it
+    if request.method == "OPTIONS":
+        return True
     if not INTERNAL_API_KEY:
         return True
     if x_api_key != INTERNAL_API_KEY:
@@ -495,7 +501,6 @@ IMPORTANT: Append the exact marker <<END_OF_QUIZ>> after the JSON array and noth
 No markdown, no commentary.
 
 Content: {raw_answer}"""
-            # Ask the model to append our end marker so we can safely trim responses
             repair_prompt = repair_prompt + "\n\nIMPORTANT: Append the exact marker <<END_OF_QUIZ>> after the JSON array and nothing else."
             if rag_system is None:
                 repaired = _direct_groq_query(repair_prompt, body.mode)
@@ -509,7 +514,6 @@ Content: {raw_answer}"""
                 items = _extract_json_array(repaired_ans)
             except Exception as e:
                 logger.warning("[quiz_generate] repair parse failed: %s", e)
-                # fallback to safe default question(s)
                 items = _validate_and_fix_questions([])
 
         questions = []
@@ -533,7 +537,7 @@ Content: {raw_answer}"""
         if not questions:
             raise ValueError("Model did not return valid quiz questions")
 
-        return QuizResponse(topic=request.topic, difficulty=request.difficulty, questions=questions)
+        return QuizResponse(topic=body.topic, difficulty=body.difficulty, questions=questions)
 
     except Exception as e:
         logger.error("Quiz generation failed: %s", e, exc_info=True)
