@@ -17,8 +17,7 @@
 Navigating statutory frameworks and case law is traditionally bottlenecked by the manual review of massive, dense PDF texts. **LegalAI** transforms static legal documents into an interactive knowledge base. 
 
 Designed for Pakistani law students, legal researchers, and citizens, the platform allows users to upload local legal documents, query them via natural language, and generate highly targeted multiple-choice revision quizzes based strictly on the ingested material.
-
-https://github.com/user-attachments/assets/f931cfba-e3c9-4113-9eae-f9b3f8367849
+https://github.com/user-attachments/assets/442cbcae-ecf2-48b1-b243-99cf063eef8f
 
 ## ✨ Key Features
 
