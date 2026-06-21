@@ -18,7 +18,7 @@ Navigating statutory frameworks and case law is traditionally bottlenecked by th
 
 Designed for Pakistani law students, legal researchers, and citizens, the platform allows users to upload local legal documents, query them via natural language, and generate highly targeted multiple-choice revision quizzes based strictly on the ingested material.
 
-https://github.com/user-attachments/assets/442cbcae-ecf2-48b1-b243-99cf063eef8f
+https://github.com/user-attachments/assets/b42fd7d2-8129-4910-a953-61f94ad2694e
 
 ## ✨ Key Features
 
